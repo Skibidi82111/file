@@ -1,61 +1,86 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    min-height: 100vh;
+    margin: 0;
     padding: 20px;
-    background-color: black; /* Ustaw tło na czarne */
-    color: white; /* Ustaw tekst na biały dla lepszej widoczności */
+    background: linear-gradient(135deg, #1a1c2c 0%, #2a3c54 100%);
+    color: #e0e0e0;
 }
 
 #searchInput {
-    padding: 10px;
+    padding: 12px 20px;
     width: 300px;
     font-size: 16px;
-    background-color: #333; /* Ciemne tło dla pola tekstowego */
-    color: white; /* Biały tekst w polu tekstowym */
-    border: 1px solid #555; /* Lekko szary border */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    outline: none;
+    margin-right: 10px;
+}
+
+#searchInput:focus {
+    border-color: #64ffda;
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
 }
 
 #searchBtn {
-    padding: 10px 20px;
+    padding: 12px 30px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #444; /* Ciemne tło przycisku */
-    color: white; /* Biały tekst przycisku */
-    border: none; /* Bez obramowania */
-    border-radius: 5px; /* Zaokrąglone rogi */
+    background: linear-gradient(45deg, #64ffda 0%, #48c9b0 100%);
+    color: #1a1c2c;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 #searchBtn:hover {
-    background-color: #555; /* Jaśniejsze tło przycisku przy najechaniu */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
 }
 
-h1, h2 {
-    color: white; /* Biały kolor dla nagłówków */
+h1 {
+    color: #64ffda;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+}
+
+h2 {
+    color: white;
 }
 
 #uploadForm {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 #fileToUpload {
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
     margin-right: 10px;
-    background-color: #333; /* Ciemne tło dla pola przesyłania pliku */
-    color: white; /* Biały tekst w polu przesyłania pliku */
-    border: 1px solid #555; /* Lekko szary border */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
 }
 
 button[type="submit"] {
-    padding: 10px 20px;
+    padding: 12px 30px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #4CAF50; /* Zielony kolor */
+    background: linear-gradient(45deg, #48c9b0 0%, #3498db 100%);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 button[type="submit"]:hover {
-    background-color: #45a049; /* Ciemniejszy zielony kolor przy najechaniu */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
 }
