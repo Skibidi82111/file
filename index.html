@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wyszukiwarka Plików</title>
-
+    <meta name="description" content="Wyszukiwarka plików z nowoczesnym interfejsem">
+    <meta name="theme-color" content="#1a1c2c">
+    <title>Nowoczesna Wyszukiwarka Plików</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,13 +16,15 @@
     <button id="searchBtn">Szukaj</button>
 
     <script>
+        const folderPath = 'file';
+        
         document.getElementById('searchBtn').addEventListener('click', function() {
             const fileName = document.getElementById('searchInput').value;
 
             // Sprawdzamy, czy pole tekstowe nie jest puste
             if (fileName !== '') {
-                // Tworzymy pełen URL do pliku na stronie Sandbox
-                const fullUrl = 'https://file.linkpost.pl/file/' + fileName;
+                const currentDomain = window.location.origin;
+                const fullUrl = `${currentDomain}/${folderPath}/${fileName}`;
                 
                 // Przekierowanie na stronę z obrazem/filmem
                 window.location.href = fullUrl;
